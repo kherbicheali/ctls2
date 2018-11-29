@@ -1,1 +1,18 @@
-\chapter{isemis 1}
+\chapter{Mise en place d'un retour d'état et d'un pré-compensateur}
+	
+	\section{Calcul du pré-compensteur}
+
+	\paragraph{}
+	Pour un système SISO (une entrée/une sortie) les pôles permettent de régler la dynamique du système, c’est-à-dire, le régime transitoire. Par contre, cette technique ne permet pas de régler le problème de la précision. Nous ne pouvons pas choisir le régime permanent du système en boucle fermée par le choix de K. Nous proposons une première structure de commande permettant d’assurer une erreur de position nulle en régime permanent tel que \cite{ref1} :
+	
+	\begin{center}
+	$u(t) = -Kx(t) + Ny_{ref}(t)$ 
+	\end{center}		
+
+	où le pré-compensateur $N$ est un gain matriciel permettant de régler le gain statique du système en boucle fermée, avec:
+	
+	\begin{center}
+	$N = \frac{1}{C(BK-A)^{-1}B}$ 
+	\end{center}	
+	Avec MATLAB\label{section 3.3} \hyperref[Annexe A]{voir Annexe A}, on a trouvé: $N= 1.389$
+	

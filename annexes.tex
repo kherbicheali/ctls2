@@ -1,0 +1,14 @@
+\begin{appendices}
+
+\chapter*{Annexe A}
+	\addcontentsline{toc}{chapter}{Annexe A}		
+	
+	Code MATLAB qui calcul la valeur de N: \label{Annexe A} \hyperref[section 3.3]{retour vers section 3.3}
+	\begin{lstlisting}
+	
+	sysbf=ss(A-B*K,B,C,D);
+	dcg=dcgain(sysbf) 
+	N=1/dcg
+	\end{lstlisting}
+
+\end{appendices}
